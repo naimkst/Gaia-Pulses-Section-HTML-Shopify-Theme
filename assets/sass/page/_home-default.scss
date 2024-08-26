@@ -25,6 +25,7 @@
         @include media-query(991px) {
             font-size: 30px;
         }
+
         @include media-query(575px) {
             font-size: 25px;
         }
@@ -253,6 +254,146 @@
 
             @media(max-width:767px) {
                 font-size: 30px;
+            }
+        }
+    }
+}
+
+// contact-section
+
+.contact-section {
+    padding-bottom: 0;
+
+    .contact-wrap {
+        background: #fffdec;
+        padding: 50px;
+        padding-bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @include media-query(991px) {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 30px 15px;
+            padding-bottom: 0;
+        }
+        @include media-query(400px) {
+            padding: 30px 15px;
+        }
+
+        .contact-left {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 600px;
+
+            @include media-query(991px) {
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 600;
+                color: $theme-primary-color;
+            }
+
+            h2 {
+                font-size: 35px;
+                color: $theme-primary-color;
+                margin-bottom: 0;
+
+                @include media-query(991px) {
+                    font-size: 30px;
+                }
+                @include media-query(575px) {
+                    font-size: 25px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 600;
+                color: $theme-primary-color;
+                margin-bottom: 40px;
+            }
+
+            a {
+                display: inline-block;
+                padding: 10px 25px;
+                text-decoration: none;
+                background: $theme-primary-color;
+                color: $white;
+                border-radius: 5px;
+                max-width: 150px;
+                text-align: center;
+
+                @include media-query(991px) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .delivery-img {
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+            }
+
+            .info-box {
+                background: #ffeeeb;
+                border: 2px solid #ecdad2;
+                padding: 5px 15px;
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                position: absolute;
+                left: -60px;
+                top: 0;
+                z-index: -1;
+
+                @include media-query(991px) {
+                    left: 0px;
+                    z-index: 1;
+                }
+
+                .info-icon {
+                    margin-right: 10px;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 40px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                }
+
+                &.s2 {
+                    top: 50%;
+                    z-index: 11;
+                    background-color: #faf7ff;
+                    border-color: #e3dceb;
+                }
+
+                &.s3 {
+                    left: auto;
+                    right: 0;
+                    top: 25%;
+                    z-index: 11;
+                    background-color: #f2fefb;
+                    border-color: #ecf4e0;
+                }
+                
+                @include media-query(400px) {
+                    position: relative;
+                    margin-bottom: 5px;
+                }
+
             }
         }
     }
@@ -653,7 +794,7 @@
         .pointer-item {
             text-align: center;
 
-            
+
             &:first-child {
                 margin-bottom: 100px;
 
@@ -661,12 +802,13 @@
                     margin-bottom: 50px;
                 }
             }
-            
+
             @include media-query(991px) {
                 max-width: 400px;
                 margin: 0 auto;
             }
-            i{
+
+            i {
                 img {
                     max-width: 40px;
                 }
